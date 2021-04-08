@@ -27,3 +27,10 @@
       $  docker image ls
 ```
 
+#### Mit Docker ein File vom Host zu einem Container kopieren
+
+```Shell
+      $  docker cp /SpeicherortDerDatei/index.html ContainereName:/var/www/html/
+```
+
+
