@@ -42,7 +42,7 @@
 * Programme: Apache2
 * Port Weiterleitung: 80
 
-### Dockerfile zur erstellung des Conteiner
+### Dockerfile zur erstellung des Containers
 
 ```Shell
 #
