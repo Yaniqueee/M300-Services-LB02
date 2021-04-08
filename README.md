@@ -44,6 +44,8 @@
 
 ### Netzwerkplan
 
+![image](https://user-images.githubusercontent.com/78543849/114041211-9fdb8180-9884-11eb-94e3-ce224f30bcf7.png)
+
 ### Testing
 
 ![image](https://user-images.githubusercontent.com/78543849/114039816-5a6a8480-9883-11eb-86bd-d05e0a1b303d.png)
