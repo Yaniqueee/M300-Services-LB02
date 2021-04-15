@@ -33,6 +33,12 @@
       $  docker cp /SpeicherortDerDatei/index.html ContainereName:/var/www/html/
 ```
 
+#### Docker Container für Service Überwachung einrichten
+
+```Shell
+      $ docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor:latest
+```
+
 ## Docker Web Umgebungs Dokumentation 
 
 ### Konfiguration
@@ -74,6 +80,13 @@ CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGR
 
 ### Testing
 
-![image](https://user-images.githubusercontent.com/78543849/114039816-5a6a8480-9883-11eb-86bd-d05e0a1b303d.png)
+#### xy
+
+![image](https://user-images.githubusercontent.com/78543849/114039816-5a6a8480-9883xy-11eb-86bd-d05e0a1b303d.png)
+
+#### Service Überwachung
+
+![image](https://user-images.githubusercontent.com/78543849/114864094-df5c1d80-9df0-11eb-998c-f3f537fd9d07.png)
+
 
 
