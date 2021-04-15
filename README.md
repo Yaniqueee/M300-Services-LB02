@@ -74,6 +74,20 @@ VOLUME /var/www/html
 CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
 ```
 
+### Sicherheitsmassnahmen
+
+#### User ohne Root rechte im Container
+
+Um einen User zu erstellen muss man folgendes im Dockerfile hinzufügen:
+
+```Shell
+      RUN useradd -ms /bin/bash NeuerUserName
+      USER NeuerUserName
+```
+
+Diese Sicherheitsmassnahme ist wichtig, da ein root User zu viele rechte hat und es somit keinen Sinn macht, wenn man im Container diese Rechte hat ohne ein Passwort einzugeben. 
+
+
 ### Netzwerkplan
 
 ![image](https://user-images.githubusercontent.com/78543849/114041211-9fdb8180-9884-11eb-94e3-ce224f30bcf7.png)
@@ -88,6 +102,13 @@ CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGR
 #### Service Überwachung
 
 ![image](https://user-images.githubusercontent.com/78543849/114864094-df5c1d80-9df0-11eb-998c-f3f537fd9d07.png)
+
+#### Sicherheitsmassnahmen
+
+##### Neuer User erstellt
+
+![image](https://user-images.githubusercontent.com/78543849/114873374-834ac680-9dfb-11eb-8480-40eadd409c26.png)
+
 
 
 
