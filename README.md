@@ -85,6 +85,12 @@ Um einen User zu erstellen muss man folgendes im Dockerfile hinzufügen:
       USER NeuerUserName
 ```
 
+#### Read-only file system
+
+```Shell
+      docker run --read-only -d -t --name NameDesContainer ImageName
+```
+
 Diese Sicherheitsmassnahme ist wichtig, da ein root User zu viele rechte hat und es somit keinen Sinn macht, wenn man im Container diese Rechte hat ohne ein Passwort einzugeben. 
 
 
@@ -108,6 +114,11 @@ Diese Sicherheitsmassnahme ist wichtig, da ein root User zu viele rechte hat und
 ##### Neuer User erstellt
 
 ![image](https://user-images.githubusercontent.com/78543849/114873374-834ac680-9dfb-11eb-8480-40eadd409c26.png)
+
+##### Read-only file system
+
+![image](https://user-images.githubusercontent.com/78543849/114876107-48965d80-9dfe-11eb-926d-4ef00e0d57aa.png)
+
 
 
 
