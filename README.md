@@ -74,9 +74,9 @@ VOLUME /var/www/html
 CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
 ```
 
-### Sicherheitsmassnahmen
+## Sicherheitsmassnahmen
 
-#### User ohne Root rechte im Container
+### User ohne Root rechte im Container
 
 Um einen User zu erstellen muss man folgendes im Dockerfile hinzufügen:
 
@@ -85,7 +85,7 @@ Um einen User zu erstellen muss man folgendes im Dockerfile hinzufügen:
       USER NeuerUserName
 ```
 
-#### Read-only file system
+### Read-only file system
 
 ```Shell
       docker run --read-only -d -t --name NameDesContainer ImageName
@@ -94,28 +94,26 @@ Um einen User zu erstellen muss man folgendes im Dockerfile hinzufügen:
 Diese Sicherheitsmassnahme ist wichtig, da ein root User zu viele rechte hat und es somit keinen Sinn macht, wenn man im Container diese Rechte hat ohne ein Passwort einzugeben. 
 
 
-### Netzwerkplan
 
-![image](https://user-images.githubusercontent.com/78543849/114041211-9fdb8180-9884-11eb-94e3-ce224f30bcf7.png)
 
-### Testing
+## Testing
 
-#### xy
+### Apache Web Server
 
 ![image](https://user-images.githubusercontent.com/78543849/114039816-5a6a8480-9883-11eb-86bd-d05e0a1b303d.png)
 
 
-#### Service Überwachung
+### Service Überwachung
 
 ![image](https://user-images.githubusercontent.com/78543849/114864094-df5c1d80-9df0-11eb-998c-f3f537fd9d07.png)
 
-#### Sicherheitsmassnahmen
+### Sicherheitsmassnahmen
 
-##### Neuer User erstellt
+#### Neuer User erstellt
 
 ![image](https://user-images.githubusercontent.com/78543849/114873374-834ac680-9dfb-11eb-8480-40eadd409c26.png)
 
-##### Read-only file system
+#### Read-only file system
 
 ![image](https://user-images.githubusercontent.com/78543849/114876107-48965d80-9dfe-11eb-926d-4ef00e0d57aa.png)
 
