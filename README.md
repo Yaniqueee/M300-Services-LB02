@@ -93,8 +93,8 @@ Um einen User zu erstellen muss man folgendes im Dockerfile hinzufügen:
 
 Diese Sicherheitsmassnahme ist wichtig, da ein root User zu viele rechte hat und es somit keinen Sinn macht, wenn man im Container diese Rechte hat ohne ein Passwort einzugeben. 
 
-
-
+### Dockerfile's
+Es ist Wichtig wenn man seine Umgebung schützen will, dass man keine Dockerfiles aus dem Internet braucht, denn diese könnten Malware oder ähnliches enthalten. Man sollte darum seine Dockerfiles immer selber schreiben.
 
 ## Testing
 
